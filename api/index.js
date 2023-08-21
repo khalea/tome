@@ -23,6 +23,11 @@ app.get("/testCLI", (req, res) => {
   });
 });
 
+app.get("/begin", (req, res) => {
+  console.log(`📚 Welcome to Tome.`);
+  narrative.initialize();
+});
+
 app.listen(port, () => {
   console.log(`📚 Tome is running on Port ${port} (http://localhost:${port}).`);
 });
