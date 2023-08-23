@@ -8,9 +8,15 @@ Tome is a text-based Role-Play Game (RPG) making use of OpenAI's ChatGPT for nar
 
 ## Install & Run
 
-Using the command line, navigate to a folder where you want the project to be installed (ie. Projects). Clone the repository: 
+Using the command line, navigate to a folder where you want the project to be installed (ie. Projects). Clone the repository:
 
 `> git clone https://github.com/khalea/tome.git`
+
+Create a `.env` file in the root of the project folder and add your OpenAI API key:
+
+`OPENAI_API_KEY="REPLACE_TEXT_WITH_KEY"`
+
+> _This file will be ignored by Git for security purposes, by default. Do not remove `.env` from the `.gitignore` file._
 
 Navigate to the repository folder on your computer and run the following:
 
@@ -19,7 +25,7 @@ Navigate to the repository folder on your computer and run the following:
 > node start
 ```
 
-If successful, you should see the following in the command line: 
+If successful, you should see the following in the command line:
 
 `📚 Tome is running on Port 3001 (http://localhost:3001).`
 
@@ -29,20 +35,12 @@ To start the command line program, you can either make a request to the `/begin`
 
 In a new terminal window, run:
 
-`curl http://localhost:3001/begin`
-
-##### Browser
-
-Navigate to the URL in a browser of your choosing:
-
-`http://localhost:3001/begin`
-
-If either is successful, you should see the following message & prompt in the terminal window thatt the server is running on:
+`node cli/TomeCLI`
 
 ```
 📚 Welcome to Tome.
 
-Set the CONTEXT of your story. Write a comma separated list of keywords (ie. Futuristic, Desert, Cyberpunk):  
+Set the CONTEXT of your story. Write a comma separated list of keywords (ie. Futuristic, Desert, Cyberpunk):
 ```
 
 ---
