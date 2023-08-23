@@ -1,28 +1,28 @@
-require("node:fs");
-const { stdin: input, stdout: output } = require("node:process");
+require('node:fs');
+const { stdin: input, stdout: output } = require('node:process');
 
-const readline = require("node:readline");
+const readline = require('node:readline');
 
 class CLI {
-  constructor() {
-    this.readline = readline;
-  }
+	constructor() {
+		this.readline = readline;
+	}
 
-  outputToCLI(text) {
-    console.log(text);
-  }
+	outputToCLI(text) {
+		console.log(text);
+	}
 
-  getCliInput(prompt, callback) {
-    const rl = readline.createInterface({
-      input,
-      output,
-    });
+	getCliInput(prompt, callback) {
+		const rl = readline.createInterface({
+			input,
+			output,
+		});
 
-    rl.question(prompt, (input) => {
-      callback(input);
-      rl.close();
-    });
-  }
+		rl.question(prompt, (input) => {
+			callback(input);
+			rl.close();
+		});
+	}
 }
 
 module.exports = CLI;
